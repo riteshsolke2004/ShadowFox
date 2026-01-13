@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --rcb-red: #D71920;
+  --rcb-gold: #CBA92B;
+  --rcb-black: #000000;
+  --rcb-dark: #1C1C1C;
+  --rcb-gray: #333333;
+  --text-light: #FFFFFF;
+  --text-dark: #000000;
+  --font-heading: 'Teko', sans-serif;
+  --font-body: 'Oswald', sans-serif;
+  --nav-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--rcb-black);
+  color: var(--text-light);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-heading);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Official Button Styles */
+.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--rcb-red);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #b01217;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.btn-gold {
+  background-color: var(--rcb-gold);
+  color: black;
+}
+
+.btn-gold:hover {
+  background-color: #e5be35;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Hover effect helper */
+.hover-text-gold:hover {
+  color: var(--rcb-gold) !important;
+}
